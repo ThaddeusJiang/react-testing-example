@@ -4,7 +4,7 @@ on: pull_request
 
 jobs:
   test:
-    name: Unit Tests
+    name: Unit Tests & E2E Tests
     runs-on: ubuntu-latest
     steps:
       - name: Check out code
@@ -13,7 +13,12 @@ jobs:
       - name: Install dependencies
         run: yarn install --non-interactive --no-progress --frozen-lockfile --ignore-optional
 
-      - name: Run tests
+      - name: Unit Tests
         run: yarn test
         env:
           CI: true
+
+      - name: E2E Tests
+        run: yarn cy:ci
+        env:
+          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
