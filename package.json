@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@reach/router": "^1.2.1",
     "@types/jest": "^24.0.23",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
@@ -12,7 +13,10 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "cy:open": "cypress open",
+    "start-server": "npm start",
+    "cy:record": "cypress run --record",
+    "cy:ci": "start-server-and-test start-server http://localhost:3000 cy:record"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -30,6 +34,9 @@
     ]
   },
   "devDependencies": {
-    "@testing-library/react": "^9.3.2"
+    "@testing-library/react": "^9.3.2",
+    "cypress": "^3.6.1",
+    "eslint-plugin-cypress": "^2.7.0",
+    "start-server-and-test": "^1.10.6"
   }
 }
