@@ -15,4 +15,9 @@ describe("Login Page", function() {
 
     cy.contains("HOME");
   });
+
+  it("visual testing for login page", function() {
+    cy.visit("/login");
+    cy.percySnapshot();
+  });
 });
