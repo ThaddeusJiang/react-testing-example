@@ -1,5 +1,5 @@
 {
-  "name": "testing-demo",
+  "name": "react-testing-example",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -15,7 +15,7 @@
     "test": "react-scripts test",
     "cy:open": "cypress open",
     "start-server": "npm start",
-    "cy:record": "cypress run --record",
+    "cy:record": "percy exec -- cypress run --record",
     "cy:ci": "start-server-and-test start-server http://localhost:3000 cy:record"
   },
   "eslintConfig": {
@@ -34,6 +34,7 @@
     ]
   },
   "devDependencies": {
+    "@percy/cypress": "^2.2.0",
     "@testing-library/react": "^9.3.2",
     "cypress": "^3.6.1",
     "eslint-plugin-cypress": "^2.7.0",
