@@ -1,5 +1,7 @@
 # React Testing Example
 
+[![This project is using Percy.io for visual regression testing.](https://percy.io/static/images/percy-badge.svg)](https://percy.io/Jifa/react-testing-example)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Related
@@ -34,3 +36,15 @@ yarn cy:open
 ```
 yarn cy:record
 ```
+
+## [GitHub Actions Status](/actions)
+
+![github actions](./docs/github-actions.jpg)
+
+## [E2E Testing Report](https://dashboard.cypress.io/#/projects/d1urg6/runs)
+
+![cypress dashboard](./docs/cypress-dashboard.jpg)
+
+## [Visual Testing Report](https://percy.io/ThaddeusJiang/react-testing-example)
+
+![percy report](./docs/percy-report.jpg)
